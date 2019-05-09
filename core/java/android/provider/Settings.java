@@ -4520,6 +4520,298 @@ public final class Settings {
          */
 
         /**
+
+         *  Enable statusbar double tap gesture on to put device to sleep
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
+
+        /** @hide */
+        private static final Validator DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * Double tap on lockscreen to sleep
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_LOCKSCREEN =
+                "double_tap_sleep_lockscreen";
+
+        /** @hide */
+        private static final Validator DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+       /**
+        * Defines the global heads up notification snooze
+        * @hide
+        */
+        public static final String HEADS_UP_NOTIFICATION_SNOOZE = "heads_up_notification_snooze";
+
+        /** @hide */
+        private static final Validator HEADS_UP_NOTIFICATION_SNOOZE_VALIDATOR =
+              new SettingsValidators.InclusiveIntegerRangeValidator(0, 1200000);
+
+        /**
+        * Heads up timeout configuration
+        * @hide
+        */
+        public static final String HEADS_UP_TIMEOUT = "heads_up_timeout";
+
+        /** @hide */
+        private static final Validator HEADS_UP_TIMEOUT_VALIDATOR =
+              new SettingsValidators.InclusiveIntegerRangeValidator(0, 10000);
+
+        /**
+         * Whether to enable Ambient edge light
+         * @hide
+         */
+        public static final String PULSE_AMBIENT_LIGHT = "pulse_ambient_light";
+
+        /** @hide */
+        private static final Validator PULSE_AMBIENT_LIGHT_VALIDATOR = BOOLEAN_VALIDATOR;
+
+        /**
+         * What color to use for Ambient edge light
+         * @hide
+         */
+        public static final String PULSE_AMBIENT_LIGHT_COLOR = "pulse_ambient_light_color";
+
+        /** @hide */
+        private static final Validator PULSE_AMBIENT_LIGHT_COLOR_VALIDATOR = ANY_STRING_VALIDATOR;
+
+        /** @hide */
+        public static final String BACK_GESTURE_HEIGHT = "back_gesture_height";
+
+        /** @hide */
+        private static final Validator BACK_GESTURE_HEIGHT_VALIDATOR = ANY_INTEGER_VALIDATOR;
+
+        /**
+         * Enable\Disable visibility of smart replies in notifications
+         * @hide
+         */
+        public static final String HIDE_SMART_REPLIES = "hide_smart_replies";
+
+        /** @hide */
+        private static final Validator HIDE_SMART_REPLIES_VALIDATOR = BOOLEAN_VALIDATOR;
+
+        /**
+         * FOD icon picker
+         * @hide
+         */
+        public static final String FOD_ICON = "fod_icon";
+
+        /**
+         * FOD use wallpaper color
+         * @hide
+         */
+        public static final String FOD_ICON_WALLPAPER_COLOR = "fod_icon_wallpaper_color";
+
+        /**
+         * Refreshed screenshot animation
+         * @hide
+         */
+        public static final String NEW_SCREENSHOTUI = "new_screenshotui";
+
+        /**
+         * Show data usage in QS header
+         * @hide
+         */
+        public static final String QS_DATAUSAGE = "qs_datausage";
+
+        /**
+         * Whether the battery light should be enabled (if hardware supports it)
+         * The value is boolean (1 or 0).
+         * @hide
+         */
+        public static final String BATTERY_LIGHT_ENABLED = "battery_light_enabled";
+
+        /** @hide */
+        private static final Validator BATTERY_LIGHT_ENABLED_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * Whether to show battery light when DND mode is active
+         * @hide
+         */
+        public static final String BATTERY_LIGHT_ALLOW_ON_DND = "battery_light_allow_on_dnd";
+
+        /** @hide */
+        private static final Validator BATTERY_LIGHT_ALLOW_ON_DND_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * Whether to show blinking light when battery is low
+         * @hide
+         */
+        public static final String BATTERY_LIGHT_LOW_BLINKING = "battery_light_low_blinking";
+
+        /** @hide */
+        private static final Validator BATTERY_LIGHT_LOW_BLINKING_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * Low battery charging color
+         * @hide
+         */
+        public static final String BATTERY_LIGHT_LOW_COLOR = "battery_light_low_color";
+
+        /** @hide */
+        private static final Validator BATTERY_LIGHT_LOW_COLOR_VALIDATOR =
+                ANY_STRING_VALIDATOR;
+
+        /**
+         * Medium battery charging color
+         * @hide
+         */
+        public static final String BATTERY_LIGHT_MEDIUM_COLOR = "battery_light_medium_color";
+
+        /** @hide */
+        private static final Validator BATTERY_LIGHT_MEDIUM_COLOR_VALIDATOR =
+                ANY_STRING_VALIDATOR;
+
+        /**
+         * Full battery charging color
+         * @hide
+         */
+        public static final String BATTERY_LIGHT_FULL_COLOR = "battery_light_full_color";
+
+        /** @hide */
+        private static final Validator BATTERY_LIGHT_FULL_COLOR_VALIDATOR =
+                ANY_STRING_VALIDATOR;
+
+        /**
+         * Really full 100 battery charging color
+         * @hide
+         */
+        public static final String BATTERY_LIGHT_REALLYFULL_COLOR = "battery_light_reallyfull_color";
+
+        /** @hide */
+        private static final Validator BATTERY_LIGHT_REALLYFULL_COLOR_VALIDATOR =
+                ANY_STRING_VALIDATOR;
+
+        /**
+         * DismissAll Button
+         * @hide
+         */
+        public static final String DISMISS_ALL_BUTTON = "dismiss_all_button";
+
+        /**
+         * whether to enable or disable vibration on succesful fingerprint auth
+         *
+         * @hide
+         */
+        public static final String FINGERPRINT_SUCCESS_VIB = "fingerprint_success_vib";
+
+        /** @hide */
+        private static final Validator FINGERPRINT_SUCCESS_VIB_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * Some creation simillar to samsung OneUI
+         * @hide
+         */
+        public static final String SETTINGS_SPACER = "settings_spacer";
+
+        /**
+         * Ability to show/hide settings dashboard suggestion cards
+         * @hide
+         */
+        public static final String SETTINGS_SUGGESTION_CARDS = "settings_suggestion_cards";
+
+        /**
+         * Ability to hide notch
+         * @hide
+         */
+        public static final String HIDE_NOTCH = "hide_notch";
+
+        /** @hide */
+        private static final Validator HIDE_NOTCH_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * @hide
+         */
+        public static final String ASPECT_RATIO_APPS_LIST = "aspect_ratio_apps_list";
+
+        /** @hide */
+        private static final Validator ASPECT_RATIO_APPS_LIST_VALIDATOR = ANY_STRING_VALIDATOR;
+
+        /**
+         * @hide
+         */
+        public static final String ASPECT_RATIO_APPS_ENABLED = "aspect_ratio_apps_enabled";
+
+        /** @hide */
+        private static final Validator ASPECT_RATIO_APPS_ENABLED_VALIDATOR = BOOLEAN_VALIDATOR;
+
+        /**
+         * QS blur
+         * @hide
+         */
+        public static final String QS_BLUR = "qs_blur";
+
+        /**
+         * @hide
+         */
+        public static final String VOLUME_BUTTON_MUSIC_CONTROL = "volume_button_music_control";
+        /** @hide */
+        private static final Validator VOLUME_BUTTON_MUSIC_CONTROL_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * Number of qs columns on landscape orientation
+         * @hide
+         */
+        public static final String QS_LAYOUT_COLUMNS_LANDSCAPE = "qs_layout_columns_landscape";
+         /** @hide */
+        private static final Validator QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+         /**
+         * @hide
+         */
+        public static final String QS_LAYOUT_COLUMNS = "qs_layout_columns";
+         /** @hide */
+        private static final Validator QS_LAYOUT_COLUMNS_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
+         * Wheter to show network traffic indicator in statusbar
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
+
+        /**
+         * Network traffic inactivity threshold (default is 1 kBs)
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
+
+        /**
+         * Whether to disable showing arrows in statusbar network traffic indicators
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_HIDEARROW = "network_traffic_hidearrow";
+
+        /** @hide */
+        public static final String GESTURE_PILL_TOGGLE = "gesture_pill_toggle";
+
+        /** @hide */
+        private static final Validator GESTURE_PILL_TOGGLE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+         * Swipe to screenshot
+         * @hide
+         */
+        public static final String SWIPE_TO_SCREENSHOT = "swipe_to_screenshot";
+
+         /** @hide */
+        public static final Validator SWIPE_TO_SCREENSHOT_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
+>>>>>>> 349fdd6e0a8... Add 3 finger swipe screenshot [1/2]
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -4583,7 +4875,32 @@ public final class Settings {
             HAPTIC_FEEDBACK_INTENSITY,
             DISPLAY_COLOR_MODE,
             ALARM_ALERT,
-            NOTIFICATION_LIGHT_PULSE,
+            NOTIFICATION_LIGHT_PULSE,=
+            DOUBLE_TAP_SLEEP_GESTURE,
+            DOUBLE_TAP_SLEEP_LOCKSCREEN,
+            HEADS_UP_NOTIFICATION_SNOOZE,
+            HEADS_UP_TIMEOUT,
+            PULSE_AMBIENT_LIGHT,
+            PULSE_AMBIENT_LIGHT_COLOR,
+            BACK_GESTURE_HEIGHT,
+            HIDE_SMART_REPLIES,
+            BATTERY_LIGHT_ENABLED,
+            BATTERY_LIGHT_ALLOW_ON_DND,
+            BATTERY_LIGHT_LOW_BLINKING,
+            BATTERY_LIGHT_LOW_COLOR,
+            BATTERY_LIGHT_MEDIUM_COLOR,
+            BATTERY_LIGHT_FULL_COLOR,
+            BATTERY_LIGHT_REALLYFULL_COLOR,
+            FINGERPRINT_SUCCESS_VIB,
+            HIDE_NOTCH,
+            ASPECT_RATIO_APPS_ENABLED,
+            ASPECT_RATIO_APPS_LIST,
+            VOLUME_BUTTON_MUSIC_CONTROL,
+            QS_LAYOUT_COLUMNS_LANDSCAPE,
+            QS_LAYOUT_COLUMNS,
+            GESTURE_PILL_TOGGLE,
+            SWIPE_TO_SCREENSHOT,
+>>>>>>> 349fdd6e0a8... Add 3 finger swipe screenshot [1/2]
         };
 
         /**
@@ -4707,6 +5024,33 @@ public final class Settings {
             PRIVATE_SETTINGS.add(BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED);
             PRIVATE_SETTINGS.add(BUTTON_BRIGHTNESS);
             PRIVATE_SETTINGS.add(PROXIMITY_ON_WAKE);
+<<<<<<< HEAD
+=======
+            PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
+            PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
+            PRIVATE_SETTINGS.add(HEADS_UP_NOTIFICATION_SNOOZE);
+            PRIVATE_SETTINGS.add(HEADS_UP_TIMEOUT);
+            PRIVATE_SETTINGS.add(PULSE_AMBIENT_LIGHT);
+            PRIVATE_SETTINGS.add(PULSE_AMBIENT_LIGHT_COLOR);
+            PRIVATE_SETTINGS.add(BACK_GESTURE_HEIGHT);
+            PRIVATE_SETTINGS.add(HIDE_SMART_REPLIES);
+            PRIVATE_SETTINGS.add(BATTERY_LIGHT_ENABLED);
+            PRIVATE_SETTINGS.add(BATTERY_LIGHT_ALLOW_ON_DND);
+            PRIVATE_SETTINGS.add(BATTERY_LIGHT_LOW_BLINKING);
+            PRIVATE_SETTINGS.add(BATTERY_LIGHT_LOW_COLOR);
+            PRIVATE_SETTINGS.add(BATTERY_LIGHT_MEDIUM_COLOR);
+            PRIVATE_SETTINGS.add(BATTERY_LIGHT_FULL_COLOR);
+            PRIVATE_SETTINGS.add(BATTERY_LIGHT_REALLYFULL_COLOR);
+            PRIVATE_SETTINGS.add(FINGERPRINT_SUCCESS_VIB);
+            PRIVATE_SETTINGS.add(HIDE_NOTCH);
+            PRIVATE_SETTINGS.add(ASPECT_RATIO_APPS_ENABLED);
+            PRIVATE_SETTINGS.add(ASPECT_RATIO_APPS_LIST);
+            PRIVATE_SETTINGS.add(VOLUME_BUTTON_MUSIC_CONTROL);
+            PRIVATE_SETTINGS.add(QS_LAYOUT_COLUMNS_LANDSCAPE);
+            PRIVATE_SETTINGS.add(QS_LAYOUT_COLUMNS);
+            PRIVATE_SETTINGS.add(GESTURE_PILL_TOGGLE);
+            PRIVATE_SETTINGS.add(SWIPE_TO_SCREENSHOT);
+>>>>>>> 349fdd6e0a8... Add 3 finger swipe screenshot [1/2]
         }
 
         /**
@@ -4804,6 +5148,35 @@ public final class Settings {
             VALIDATORS.put(BUTTON_BRIGHTNESS, BUTTON_BRIGHTNESS_VALIDATOR);
             VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
             VALIDATORS.put(BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED, BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED_VALIDATOR);
+<<<<<<< HEAD
+=======
+            VALIDATORS.put(DOUBLE_TAP_SLEEP_GESTURE, DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
+            VALIDATORS.put(DOUBLE_TAP_SLEEP_LOCKSCREEN, DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR);
+            VALIDATORS.put(HEADS_UP_NOTIFICATION_SNOOZE,HEADS_UP_NOTIFICATION_SNOOZE_VALIDATOR);
+            VALIDATORS.put(HEADS_UP_TIMEOUT,HEADS_UP_TIMEOUT_VALIDATOR);
+            VALIDATORS.put(PULSE_AMBIENT_LIGHT, PULSE_AMBIENT_LIGHT_VALIDATOR);
+            VALIDATORS.put(PULSE_AMBIENT_LIGHT_COLOR, PULSE_AMBIENT_LIGHT_COLOR_VALIDATOR);
+            VALIDATORS.put(BACK_GESTURE_HEIGHT, BACK_GESTURE_HEIGHT_VALIDATOR);
+            VALIDATORS.put(HIDE_SMART_REPLIES, HIDE_SMART_REPLIES_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_ENABLED, BATTERY_LIGHT_ENABLED_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_ALLOW_ON_DND, BATTERY_LIGHT_ALLOW_ON_DND_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_LOW_BLINKING, BATTERY_LIGHT_LOW_BLINKING_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_LOW_COLOR, BATTERY_LIGHT_LOW_COLOR_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_MEDIUM_COLOR, BATTERY_LIGHT_MEDIUM_COLOR_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_FULL_COLOR, BATTERY_LIGHT_FULL_COLOR_VALIDATOR);
+            VALIDATORS.put(BATTERY_LIGHT_REALLYFULL_COLOR, BATTERY_LIGHT_REALLYFULL_COLOR_VALIDATOR);
+            VALIDATORS.put(FINGERPRINT_SUCCESS_VIB, FINGERPRINT_SUCCESS_VIB_VALIDATOR);
+            VALIDATORS.put(ACCELEROMETER_ROTATION_ANGLES, ACCELEROMETER_ROTATION_ANGLES_VALIDATOR);
+            VALIDATORS.put(HIDE_NOTCH, HIDE_NOTCH_VALIDATOR);
+            VALIDATORS.put(ASPECT_RATIO_APPS_ENABLED, ASPECT_RATIO_APPS_ENABLED_VALIDATOR);
+            VALIDATORS.put(ASPECT_RATIO_APPS_LIST, ASPECT_RATIO_APPS_LIST_VALIDATOR);
+            VALIDATORS.put(VOLUME_BUTTON_MUSIC_CONTROL, VOLUME_BUTTON_MUSIC_CONTROL_VALIDATOR);
+            VALIDATORS.put(QS_LAYOUT_COLUMNS_LANDSCAPE,
+                    QS_LAYOUT_COLUMNS_LANDSCAPE_VALIDATOR);
+            VALIDATORS.put(QS_LAYOUT_COLUMNS, QS_LAYOUT_COLUMNS_VALIDATOR);
+            VALIDATORS.put(GESTURE_PILL_TOGGLE, GESTURE_PILL_TOGGLE_VALIDATOR);
+            VALIDATORS.put(SWIPE_TO_SCREENSHOT, SWIPE_TO_SCREENSHOT_VALIDATOR);
+>>>>>>> 349fdd6e0a8... Add 3 finger swipe screenshot [1/2]
         }
 
         /**
