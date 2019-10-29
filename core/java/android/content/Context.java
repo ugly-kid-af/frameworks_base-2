@@ -4692,6 +4692,16 @@ public abstract class Context {
     public static final String LONGSCREENSHOT_SERVICE = "longshot";
 
     /**
+     * Use with {@link #getSystemService} to retrieve a
+     * {@link android.os.PocketManager} for accessing and listening to device pocket state.
+     *
+     * @hide
+     * @see #getSystemService
+     * @see android.os.PocketManager
+     */
+    public static final String POCKET_SERVICE = "pocket";
+
+    /**
      * Determine whether the given permission is allowed for a particular
      * process and user ID running in the system.
      *
@@ -5116,7 +5126,7 @@ public abstract class Context {
      * there will be no restrictions on the packages that can be loaded,
      * but {@link #getClassLoader} will always return the default system
      * class loader.
-     */
+*/
     public static final int CONTEXT_INCLUDE_CODE = 0x00000001;
 
     /**
