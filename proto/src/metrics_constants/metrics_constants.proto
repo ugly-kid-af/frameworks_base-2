@@ -823,6 +823,12 @@ message MetricsEvent {
     // OS: 6.0
     QS_BLUETOOTH = 113;
 
+    // OPEN: QS Caffeine tile shown
+    // ACTION: QS Caffeine tile tapped
+    //  SUBTYPE: 0 is off, 1 is on
+    // CATEGORY: QUICK_SETTINGS
+    // OS: 6.0
+    QS_CAFFEINE = 1760;
     // OPEN: QS Cast tile shown
     // ACTION: QS Cast tile tapped
     // CATEGORY: QUICK_SETTINGS
