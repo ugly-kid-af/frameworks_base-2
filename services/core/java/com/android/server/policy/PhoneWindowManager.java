@@ -227,7 +227,6 @@ import com.android.server.wm.AppTransition;
 import com.android.server.wm.DisplayPolicy;
 import com.android.server.wm.DisplayRotation;
 import com.android.server.wm.WindowManagerInternal;
-import com.android.server.policy.pocket.PocketLock;
 import android.pocket.PocketManager;
 import android.pocket.IPocketCallback;
 import com.android.server.wm.WindowManagerInternal.AppTransitionListener;
