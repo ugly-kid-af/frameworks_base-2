@@ -1834,6 +1834,7 @@ public final class SystemServer {
             traceBeginAndSlog("StartPocketService");
             mSystemServiceManager.startService(PocketService.class);
             traceEnd();
+            }
 
             // Pocket Bridge Service
             if (!context.getResources().getString(
