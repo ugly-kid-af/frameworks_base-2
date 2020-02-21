@@ -28,6 +28,7 @@ import android.widget.TextView;
 
 import com.android.systemui.Dependency;
 import com.android.systemui.R;
+import com.android.systemui.plugins.DarkIconDispatcher;
 import com.android.systemui.statusbar.plugins.DarkIconDispatcher.DarkReceiver;
 /*
 *
