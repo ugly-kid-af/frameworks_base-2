@@ -78,6 +78,7 @@ public class LightBarController implements BatteryController.BatteryStateChangeC
     private final Rect mLastFullscreenBounds = new Rect();
     private final Rect mLastDockedBounds = new Rect();
     private boolean mQsCustomizing;
+
     private boolean mDirectReplying;
     private boolean mNavbarColorManagedByIme;
 

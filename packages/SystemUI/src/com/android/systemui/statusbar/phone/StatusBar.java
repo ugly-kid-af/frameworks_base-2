@@ -855,7 +855,6 @@ public class StatusBar extends SystemUI implements DemoMode,
         mNotificationPanel.addExpansionListener(mWakeUpCoordinator);
 
         Dependency.get(DarkIconDispatcher.class).addDarkReceiver(mNotificationIconAreaController);
-
         // Allow plugins to reference DarkIconDispatcher and StatusBarStateController
         Dependency.get(PluginDependencyProvider.class)
                 .allowPluginDependency(DarkIconDispatcher.class);
