@@ -1862,6 +1862,7 @@ public final class SystemServer {
             traceBeginAndSlog("StartLiveDisplayService");
             mSystemServiceManager.startService(LiveDisplayService.class);
             traceEnd();
+        }
 
         if (!isWatch) {
             traceBeginAndSlog("StartMediaProjectionManager");
