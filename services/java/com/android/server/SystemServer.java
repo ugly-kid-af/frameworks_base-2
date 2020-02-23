@@ -170,11 +170,6 @@ import java.util.Timer;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
 
-
-// LiveDisplay
-import com.android.server.custom.LineageHardwareService;
-import com.android.server.custom.display.LiveDisplayService;
-
 public final class SystemServer {
 
     private static final String TAG = "SystemServer";
@@ -1854,15 +1849,6 @@ public final class SystemServer {
                 mSystemServiceManager.startService(PocketBridgeService.class);
                 traceEnd();
             }
-
-	    // LiveDisplay
-            traceBeginAndSlog("StartLineageHardwareService");
-            mSystemServiceManager.startService(LineageHardwareService.class);
-            traceEnd();
-            traceBeginAndSlog("StartLiveDisplayService");
-            mSystemServiceManager.startService(LiveDisplayService.class);
-            traceEnd();
-        }
 
         if (!isWatch) {
             traceBeginAndSlog("StartMediaProjectionManager");
