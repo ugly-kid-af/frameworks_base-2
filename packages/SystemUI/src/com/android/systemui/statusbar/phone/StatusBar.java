@@ -849,8 +849,9 @@ public class StatusBar extends SystemUI implements DemoMode,
         mStatusBarWindow.setOnTouchListener(getStatusBarWindowTouchListener());
 
         // TODO: Deal with the ugliness that comes from having some of the statusbar broken out
-        // into fragments, but the rest here, it leaves some awkward lifecycle and whatnot.
-        mNotificationPanel = mStatusBarWindow.findViewById(R.id.notification_panel);
+        // into fragments, but the rest here, it leaves some awkward lifecycle and whatnot.;
+    	mNotificationPanel = mStatusBarWindow.findViewById(R.id.notification_panel);
+	mStaticNotificationPanel = mNotificationPanel;
         mStackScroller = mStatusBarWindow.findViewById(R.id.notification_stack_scroller);
         mZenController.addCallback(this);
         mQSBlurView = mStatusBarWindow.findViewById(R.id.qs_blur);
