@@ -852,6 +852,7 @@ public class StatusBar extends SystemUI implements DemoMode,
         // into fragments, but the rest here, it leaves some awkward lifecycle and whatnot.;
     	mNotificationPanel = mStatusBarWindow.findViewById(R.id.notification_panel);
 	mStaticNotificationPanel = mNotificationPanel;
+	mStaticContext = mContext;
         mStackScroller = mStatusBarWindow.findViewById(R.id.notification_stack_scroller);
         mZenController.addCallback(this);
         mQSBlurView = mStatusBarWindow.findViewById(R.id.qs_blur);
