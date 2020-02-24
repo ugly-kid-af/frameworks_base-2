@@ -78,6 +78,7 @@ import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.Rect;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.AudioAttributes;
@@ -452,6 +453,8 @@ public class StatusBar extends SystemUI implements DemoMode,
 
     public ImageView mQSBlurView;
     private boolean blurperformed = false;
+    protected static NotificationPanelView mStaticNotificationPanel;
+    private static Context mStaticContext;
 
     // ensure quick settings is disabled until the current user makes it through the setup wizard
     @VisibleForTesting
