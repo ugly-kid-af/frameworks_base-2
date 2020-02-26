@@ -131,6 +131,11 @@ public class NotificationPanelView extends PanelView implements
     private static final boolean DEBUG = false;
 
     /**
+     * Definition for disabling QS on lockscreen
+     */
+    private static final String STATUS_BAR_LOCKED_ON_SECURE_KEYGUARD = "status_bar_locked_on_secure_keyguard";
+
+    /**
      * Fling expanding QS.
      */
     public static final int FLING_EXPAND = 0;
