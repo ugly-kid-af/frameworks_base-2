@@ -8694,24 +8694,6 @@ public final class Settings {
         public static final String MANAGED_PROFILE_CONTACT_REMOTE_SEARCH =
                 "managed_profile_contact_remote_search";
 
-	/**
-         * Setting to record whether to allow quickly expanding the Quick Settings screen
-         * with simplified gestures. To be used with the OTS framework.
-         *
-         * @hide
-         */
-        public static final String QUICK_SETTINGS_QUICK_PULL_DOWN =
-                "quick_settings_quick_pull_down";
-
-        /**
-         * Settings to reset on user request. They will fall back to their default value (0).
-         *
-         * @hide
-         */
-        public static final String[] SETTINGS_TO_RESET = {
-            QUICK_SETTINGS_QUICK_PULL_DOWN
-        };
-
         /**
          * Whether parent profile can access remote calendar data in managed profile.
          *
