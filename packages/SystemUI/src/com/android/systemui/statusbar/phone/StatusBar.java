@@ -671,7 +671,6 @@ public class StatusBar extends SystemUI implements DemoMode,
 
         mUiModeManager = mContext.getSystemService(UiModeManager.class);
         mKeyguardViewMediator = getComponent(KeyguardViewMediator.class);
-        mNavigationBarSystemUiVisibility = mNavigationBarController.createSystemUiVisibility();
         mActivityIntentHelper = new ActivityIntentHelper(mContext);
 
         KeyguardSliceProvider sliceProvider = KeyguardSliceProvider.getAttachedInstance();
