@@ -94,6 +94,4 @@
     <!-- Whether to show emergency button in power menu -->
     <bool name="config_showEmergencyButtonInPowerMenu">false</bool>
      
-    <!-- Whether device can force navbar disabling -->
-    <bool name="config_canForceDisableNavigationBar">false</bool>
 </resources>

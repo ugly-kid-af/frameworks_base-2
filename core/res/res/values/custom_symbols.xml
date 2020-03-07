@@ -78,6 +78,4 @@
     <!-- Emergency button in power menu -->
     <java-symbol type="bool" name="config_showEmergencyButtonInPowerMenu" />
 
-    <!-- Whether device can force navbar disabling -->
-    <java-symbol type="bool" name="config_canForceDisableNavigationBar" />
 </resources>
