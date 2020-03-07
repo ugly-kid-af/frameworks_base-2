@@ -671,15 +671,7 @@ public class StatusBar extends SystemUI implements DemoMode,
 
         mUiModeManager = mContext.getSystemService(UiModeManager.class);
         mKeyguardViewMediator = getComponent(KeyguardViewMediator.class);
-<<<<<<< HEAD
-        mColorExtractor = Dependency.get(SysuiColorExtractor.class);
-        mDeviceProvisionedController = Dependency.get(DeviceProvisionedController.class);
-        mNavigationBarController = Dependency.get(NavigationBarController.class);
-        mBubbleController = Dependency.get(BubbleController.class);
-        mBubbleController.setExpandListener(mBubbleExpandListener);
-=======
         mNavigationBarSystemUiVisibility = mNavigationBarController.createSystemUiVisibility();
->>>>>>> c643c34b6f2... Merge tag 'android-10.0.0_r31' of https://android.googlesource.com/platform/frameworks/base into HEAD
         mActivityIntentHelper = new ActivityIntentHelper(mContext);
 
         KeyguardSliceProvider sliceProvider = KeyguardSliceProvider.getAttachedInstance();
